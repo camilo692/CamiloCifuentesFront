@@ -92,7 +92,7 @@
 .nav-btn {
     background: none;
     border: none;
-    color: #FFD700; /* Color dorado */
+    color: white; /* Color dorado */
     font-size: 1rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -100,16 +100,16 @@
 }
 
 .nav-btn:hover {
-    color: white;
+    color: #FFD700;
 }
 
 .logo-carrito {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    filter: invert(84%) sepia(24%) saturate(1000%) hue-rotate(359deg) brightness(107%) contrast(107%); /* Esto hará que el icono sea dorado */
 }
 
 .logo-carrito:hover {
-    filter: invert(100%); /* Cambia a blanco al hacer hover */
+    filter: invert(84%) sepia(24%) saturate(1000%) hue-rotate(359deg) brightness(107%) contrast(107%); /* Esto hará que el icono sea dorado */
+
 }
