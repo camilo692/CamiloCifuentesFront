@@ -9,7 +9,7 @@ const FooterLandingContainer = () => {
 
   return (
     <footer className="footer-container">
-      <div className="footer-content">
+      <div className="footer-content ">
         
         {/* Columna izquierda */}
         <div className="footer-section footer-section-left">
@@ -25,7 +25,7 @@ const FooterLandingContainer = () => {
             alt="Logo Camilo Cifuentes"
             className="footer-logo"
           />
-          <div className="social-icons">
+          <div className="social-icons-footer">
             <a href="https://www.tiktok.com/@camilocifuentes">
               <img src="/Tiktok.png" alt="TikTok" />
             </a>
