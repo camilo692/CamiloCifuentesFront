@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+        padding: 10vh;
+        gap: 5vh;
+        padding-inline: 5vw;
+        background: #78B3CE;
+        color: #000000;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        grid-column: 1/13;
+        grid-row: 14/15;
+        padding: 10vh;
+        padding-inline: 10vw;
+        background: #78B3CE;
+        color: #000000;
+    }
+}
