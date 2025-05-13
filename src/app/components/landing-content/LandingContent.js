@@ -9,7 +9,7 @@ const LandingContent = () => {
         <div className="landing-content-container">
             <HeaderLandingContainer />
             <BannerLanding />
-            {/* <FooterLandingContainer /> */}
+            <FooterLandingContainer />
         </div>
     );
 };
