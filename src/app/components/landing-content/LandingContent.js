@@ -9,7 +9,7 @@ const LandingContent = () => {
     return (
         <>
             <HeaderLandingContainer />
-            {/* <FooterLandingContainer /> */}
+            <FooterLandingContainer />
         </>
     );
 };

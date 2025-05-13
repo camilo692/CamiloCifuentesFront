@@ -1,26 +1,103 @@
-@media (max-width: 768px) {
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        width: 100%;
-        padding: 10vh;
-        gap: 5vh;
-        padding-inline: 5vw;
-        background: #78B3CE;
-        color: #000000;
-    }
-}
-
-@media (min-width: 768px) {
-    .footer-container {
-        display: flex;
-        justify-content: space-between;
-        grid-column: 1/13;
-        grid-row: 14/15;
-        padding: 10vh;
-        padding-inline: 10vw;
-        background: #78B3CE;
-        color: #000000;
-    }
-}
+.footer-container {
+    background-color: #FFC107;
+    padding: 40px 20px;
+    color: #333;
+    font-family: sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+  }
+  
+  .footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .footer-center {
+    text-align: center;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2);
+    color: #555;
+  }
+  
+  .social-icons img {
+    width: 31px;
+    height: 31px;
+    opacity: 1;
+  }
+  
+  .footer-left-text {
+    font: normal normal normal 16px/21px Roboto;
+    letter-spacing: 0px;
+    color: #565656;
+    text-align: left;
+    opacity: 1;
+    width: 208px;
+    height: 19px;
+  }
+  
+  .footer-section-left {
+    width: 208px;
+    height: 19px;
+    font: normal normal normal 16px/21px Roboto;
+    letter-spacing: 0px;
+    color: #565656;
+    text-align: left;
+    opacity: 1;
+    align-items: flex-start;
+    margin-top: 100px;
+    padding-left: 40px;
+  }
+  
+  .footer-section-menu {
+    width: 181px;
+  }
+  
+  .footer-menu-title {
+    width: 181px;
+    height: 24px;
+    font: normal normal bold 20px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    text-align: right;
+    opacity: 1;
+  }
+  
+  .footer-menu-item {
+    width: 172px;
+    height: 20px;
+    font: normal normal normal 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #565656;
+    text-align: right;
+    opacity: 1;
+  }
+  
