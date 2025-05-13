@@ -3,11 +3,13 @@
     padding: 40px 20px;
     color: #333;
     font-family: sans-serif;
+  
   }
   
   .footer-content {
     display: flex;
     justify-content: space-between;
+   
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
@@ -15,7 +17,6 @@
   }
   
   .footer-section {
-    flex: 1;
     min-width: 200px;
     margin: 10px 0;
   }
@@ -35,7 +36,7 @@
     text-align: center;
   }
   
-  .social-icons a {
+  .social-icons-footer a {
     margin: 0 10px;
     font-size: 24px;
     color: #000;
@@ -43,12 +44,12 @@
     transition: transform 0.2s;
   }
   
-  .social-icons a:hover {
+  .social-icons-footer a:hover {
     transform: scale(1.2);
     color: #555;
   }
   
-  .social-icons img {
+  .social-icons-footer img {
     width: 31px;
     height: 31px;
     opacity: 1;
