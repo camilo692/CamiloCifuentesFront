@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import MainLandingModule from "./components/modules/main-landing/MainLandingModule";
+import Inicio from "./components/inicio/Inicio";
 
 
 export default function Home() {
-  return <MainLandingModule />;
+  return <Inicio />;
 }

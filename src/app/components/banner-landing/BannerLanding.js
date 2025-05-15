@@ -37,17 +37,17 @@ const BannerLanding = () => {
                     <button className={`store-button ${montserrat.className}`}>TIENDA</button>
                 </div>
             </div>
-            <div className="social-icons">
-                <a href="#" className="social-icon">
+            <div className="social-icons-banner">
+                <a href="#" className="social-icon-banner">
                     <img src="/tiktok.svg" alt="TikTok" />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="#" className="social-icon-banner">
                     <img src="/instagram.svg" alt="Instagram" />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="#" className="social-icon-banner">
                     <img src="/facebook.svg" alt="Facebook" />
                 </a>
-                <a href="#" className="social-icon">
+                <a href="#" className="social-icon-banner">
                     <img src="/youtube.svg" alt="YouTube" />
                 </a>
             </div>

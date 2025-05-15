@@ -97,7 +97,7 @@
     box-shadow: 0 4px 15px rgba(255, 198, 0, 0.3);
 }
 
-.social-icons {
+.social-icons-banner {
     position: fixed;
     right: 2rem;
     top: 50%;
@@ -108,7 +108,7 @@
     z-index: 10;
 }
 
-.social-icon {
+.social-icon-banner {
     width: 40px;
     height: 40px;
     background-color: var(--unnamed-color-000000);
@@ -120,12 +120,12 @@
     transition: all 0.3s ease;
 }
 
-.social-icon:hover {
+.social-icon-banner:hover {
     transform: scale(1.1);
     background-color: var(--unnamed-color-ffffff);
 }
 
-.social-icon img {
+.social-icon-banner img {
     width: 20px;
     height: 20px;
     filter: invert(1);
@@ -175,7 +175,7 @@
         margin-right: auto;
     }
 
-    .social-icons {
+    .social-icons-banner {
         position: static;
         flex-direction: row;
         justify-content: center;

@@ -102,3 +102,12 @@
     opacity: 1;
   }
   
+  .social-icons-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
