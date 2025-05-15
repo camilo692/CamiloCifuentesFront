@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 0;
   margin: 0 auto;
   gap: 2rem;
   background-color: #fff;
@@ -13,15 +13,20 @@
 }
 
 .mission-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 4rem;
+  flex: 1;
+  max-width: 50%;
+  padding: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.mission {
+  max-width: 600px;
 }
 
 .mission-title {
-  max-width: 100%;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
   font-family: PermanentMarker;
   font-size: clamp(28px, 5vw, 40px);
   font-weight: normal;
@@ -31,8 +36,7 @@
 }
 
 .mission-subtitle {
-  max-width: 100%;
-  margin: 2rem 0 1rem;
+  margin: 0 0 1.5rem;
   font-family: Rubik;
   font-size: clamp(32px, 6vw, 50px);
   font-weight: 900;
@@ -46,54 +50,66 @@
 }
 
 .mission-description {
-  max-width: 100%;
-  margin: 1rem 0 2rem;
+  margin: 0 0 2rem;
   font-family: Montserrat;
   font-size: clamp(16px, 2vw, 18px);
   line-height: 1.5;
   text-align: left;
   color: #828282;
+  max-width: 500px;
 }
 
 .nosotros-btn {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: 14px 18px;
   font-family: Montserrat;
-  font-size: clamp(16px, 2vw, 18px);
+  font-size: 16px;
   font-weight: bold;
-  text-align: center;
-  color: #fff;
   background-color: #FFB800;
+  border: none;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: Montserrat;
+  font-weight: bold;
+  text-align: left;
+  color: #fff;
 }
 
 .nosotros-btn:hover {
   background-color: #E6A600;
+  transform: translateY(-2px);
 }
 
 .mission-carousel {
   flex: 1;
-  max-width: 500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Estilos responsivos */
+/* Responsive styles */
 @media (max-width: 992px) {
-  .mission-hero-container {
-    padding: 3rem 1.5rem;
+  .mission-content {
+    padding: 3rem;
   }
 }
 
 @media (max-width: 768px) {
   .mission-hero-container {
     flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
+    height: auto;
   }
 
   .mission-content {
     max-width: 100%;
+    padding: 3rem 2rem;
+  }
+
+  .mission {
+    max-width: 100%;
+    text-align: center;
   }
 
   .mission-title,
@@ -102,9 +118,14 @@
     text-align: center;
   }
 
+  .mission-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .mission-carousel {
-    max-width: 100%;
-    margin-top: 2rem;
+    width: 100%;
+    height: 400px;
   }
 }
 
