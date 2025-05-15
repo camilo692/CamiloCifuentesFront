@@ -3,6 +3,7 @@ import BannerLanding from "../banner-landing/BannerLanding";
 import FooterLandingContainer from "../footer-landing/FooterLandingContainer";
 import HeaderLandingContainer from "../header-landing/HeaderLandingContainer";
 import ScrollingText from "../scrolling-text/ScrollingText";
+import MiNino from "../mi-nino/MiNino";
 import "./Inicio.css";
 
 const Inicio = () => {
@@ -11,6 +12,7 @@ const Inicio = () => {
       <HeaderLandingContainer />
       <BannerLanding />
       <ScrollingText />
+      <MiNino />
       <FooterLandingContainer />
     </div>
   );

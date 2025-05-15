@@ -39,16 +39,16 @@ const BannerLanding = () => {
             </div>
             <div className="social-icons-banner">
                 <a href="#" className="social-icon-banner">
-                    <img src="/tiktok.svg" alt="TikTok" />
+                    <img src="/tiktok.png" alt="TikTok" />
                 </a>
                 <a href="#" className="social-icon-banner">
-                    <img src="/instagram.svg" alt="Instagram" />
+                    <img src="/instagram.png" alt="Instagram" />
                 </a>
                 <a href="#" className="social-icon-banner">
-                    <img src="/facebook.svg" alt="Facebook" />
+                    <img src="/facebook.png" alt="Facebook" />
                 </a>
                 <a href="#" className="social-icon-banner">
-                    <img src="/youtube.svg" alt="YouTube" />
+                    <img src="/youtube.png" alt="YouTube" />
                 </a>
             </div>
             <img src="/fondo.png" alt="Banner landing" className="banner-background" />
