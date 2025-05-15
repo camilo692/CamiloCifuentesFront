@@ -4,11 +4,11 @@
 .Rectngulo-14 {
   width: 100%;
   height: 118px;
-  background-color: #f7b916;
+  background-color: #FFC600;
   overflow: hidden;
   display: flex;
   align-items: center;
-  border: 1px solid #707070;
+  border: none;
   position: relative;
 }
 
@@ -23,7 +23,7 @@
 .text-track {
   display: inline-block;
   white-space: nowrap;
-  animation: scroll-left 20s linear infinite;
+  /* animation: scroll-left 45s linear infinite; */
 }
 
 /* Estilo del texto repetido */
@@ -32,15 +32,18 @@
   align-items: center;
   margin-right: 50px;
   font-family: 'Permanent Marker', cursive;
-  font-size: 50px;
+  font-size: 40px;
   color: #000;
 }
 
 /* Ícono de fuego */
 .text-track img.fire {
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
+  width: 37px;
+  height: 53.1px;
+  margin-left: 44px;
+  margin-top: -5px;
+  position: relative;
+  top: 2px;
 }
 
 /* Animación horizontal infinita */
