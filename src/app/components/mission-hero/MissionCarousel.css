@@ -1,0 +1,76 @@
+.mission-carousel-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mission-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.caption-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+  color: white;
+  text-align: left;
+}
+
+.caption-text {
+  font-family: 'PermanentMarker', cursive;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #FFB800;
+}
+
+.caption-author {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Customize Swiper pagination */
+:root {
+  --swiper-pagination-color: #FFB800;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FFB800;
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .caption-text {
+    font-size: 1.5rem;
+  }
+
+  .caption-author {
+    font-size: 0.875rem;
+  }
+} 

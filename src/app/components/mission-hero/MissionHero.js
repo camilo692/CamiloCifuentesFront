@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import './MissionHero.css';
+import MissionCarousel from './MissionCarousel';
 
 const MissionHero = () => {
   return (
@@ -21,10 +22,9 @@ const MissionHero = () => {
       </div>
       
       <div className="mission-carousel">
-        {/* Aquí irá el carrusel de imágenes */}
+        <MissionCarousel />
       </div>
     </div>
-
   );
 };
 
