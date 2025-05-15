@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import LandingContent from "./components/landing-content/LandingContent";
+import Inicio from "./components/inicio/Inicio";
 
 
 export default function Home() {
-  return <LandingContent />;
+  return <Inicio />;
 }

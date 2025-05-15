@@ -3,9 +3,9 @@ import BannerLanding from "../banner-landing/BannerLanding";
 import FooterLandingContainer from "../footer-landing/FooterLandingContainer";
 import HeaderLandingContainer from "../header-landing/HeaderLandingContainer";
 import ScrollingText from "../scrolling-text/ScrollingText";
-import "./LandingContent.css";
+import "./Inicio.css";
 
-const LandingContent = () => {
+const Inicio = () => {
   return (
     <div className="landing-content-container">
       <HeaderLandingContainer />
@@ -16,4 +16,4 @@ const LandingContent = () => {
   );
 };
 
-export default LandingContent;
+export default Inicio; 
