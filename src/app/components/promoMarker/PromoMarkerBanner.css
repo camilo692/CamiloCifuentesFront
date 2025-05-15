@@ -1,0 +1,96 @@
+.promo-marker-container {
+    position: relative;
+    width: 100%;
+    height: 564px;
+    overflow: hidden;
+  }
+  
+  .promo-marker-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .promo-marker-background {
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+  }
+  
+  .MARCA-LA-DIFERENCIA {
+    width: auto;
+    font-family: PermanentMarker;
+    font-size: 50px;
+    font-weight: normal;
+    color: #ffc500;
+    text-align: right;
+    z-index: 3;
+  }
+  
+  .MARCA-LA-DIFERENCIA .text-style-1 {
+    font-family: Rubik;
+    font-weight: 900;
+    color: #fff;
+  }
+  
+  .LLEVATE {
+    width: auto;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: normal;
+    color: #fff;
+    text-align: right;
+    margin: 20px 0;
+    z-index: 3;
+  }
+  
+  .button-store {
+    background-color: #ffc600;
+    padding: 14px 21px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 3;
+  }
+  
+  .button-store:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 198, 0, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .promo-marker-container {
+      height: auto;
+    }
+  
+    .promo-marker-content {
+      padding: 40px 20px;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .MARCA-LA-DIFERENCIA {
+      font-size: 36px;
+      text-align: center;
+    }
+  
+    .LLEVATE {
+      font-size: 16px;
+      text-align: center;
+    }
+  
+    .button-store {
+      margin-top: 20px;
+    }
+  }
+  
