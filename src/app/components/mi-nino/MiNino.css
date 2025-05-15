@@ -1,0 +1,17 @@
+.mi-nino-container {
+    position: relative;
+    width: 100%;
+    height: 564px;
+    overflow: hidden;
+}
+
+.mi-nino-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mi-nino-background {
+    object-fit: cover;
+    object-position: center;
+} 
