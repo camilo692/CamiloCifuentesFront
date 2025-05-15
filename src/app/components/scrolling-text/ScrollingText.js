@@ -9,7 +9,7 @@ const ScrollingText = () => {
           {Array(10).fill(0).map((_, i) => (
             <span key={i}>
               COLECCIÓN DE LANZAMIENTO
-              <img src="/Fuego.png" alt="fuego" className="fire" />
+              <img src="/Fuegox2.png" alt="fuego" className="fire" />
             </span>
           ))}
         </div>
