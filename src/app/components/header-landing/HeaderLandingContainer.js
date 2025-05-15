@@ -3,8 +3,13 @@
 
 import "./HeaderLandingContainer.css";
 import { useTheme } from "@/app/providers/ThemeContext";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const HeaderLandingContainer = () => {
+  // This would typically come from your cart context/state management
+  const cartItemCount = 0;
+  const pathname = usePathname();
 
   return (
     <header className="header-landing-container">
@@ -13,13 +18,26 @@ const HeaderLandingContainer = () => {
       </div>
       
       <nav className="nav-buttons">
-        <button className="nav-btn">Inicio</button> 
-        <button className="nav-btn">Nosotros</button>
-        <button className="nav-btn">Tienda</button>
+        <Link href="/">
+          <button className={`nav-btn ${pathname === "/" ? "active" : ""}`}>
+            Inicio
+          </button>
+        </Link>
+        <Link href="/nosotros">
+          <button className={`nav-btn ${pathname === "/nosotros" ? "active" : ""}`}>
+            Nosotros
+          </button>
+        </Link>
+        <Link href="/tienda">
+          <button className={`nav-btn ${pathname === "/tienda" ? "active" : ""}`}>
+            Tienda
+          </button>
+        </Link>
       </nav>
 
-      <div className="logo-carrito ">
+      <div className="logo-carrito">
         <img src="/carrito de compra.png" alt="Logo carrito" className="header-logo" />
+        <span className="cart-counter">{cartItemCount}</span>
       </div>
     </header>
   );
