@@ -1,0 +1,115 @@
+.mission-hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  gap: 2rem;
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.mission-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem;
+
+}
+
+.mission-title {
+  max-width: 100%;
+  margin: 0 0 2rem 0;
+  font-family: PermanentMarker;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: normal;
+  line-height: 1.2;
+  text-align: left;
+  color: #000;
+}
+
+.mission-subtitle {
+  max-width: 100%;
+  margin: 2rem 0 1rem;
+  font-family: Rubik;
+  font-size: clamp(32px, 6vw, 50px);
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: left;
+  color: #000;
+}
+
+.highlight {
+  color: #FFB800;
+}
+
+.mission-description {
+  max-width: 100%;
+  margin: 1rem 0 2rem;
+  font-family: Montserrat;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.5;
+  text-align: left;
+  color: #828282;
+}
+
+.nosotros-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-family: Montserrat;
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #FFB800;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.nosotros-btn:hover {
+  background-color: #E6A600;
+}
+
+.mission-carousel {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 992px) {
+  .mission-hero-container {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .mission-content {
+    max-width: 100%;
+  }
+
+  .mission-title,
+  .mission-subtitle,
+  .mission-description {
+    text-align: center;
+  }
+
+  .mission-carousel {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-hero-container {
+    padding: 1.5rem 1rem;
+  }
+} 

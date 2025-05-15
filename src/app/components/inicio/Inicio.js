@@ -4,6 +4,7 @@ import FooterLandingContainer from "../footer-landing/FooterLandingContainer";
 import HeaderLandingContainer from "../header-landing/HeaderLandingContainer";
 import ScrollingText from "../scrolling-text/ScrollingText";
 import MiNino from "../mi-nino/MiNino";
+import MissionHero from "../mission-hero/MissionHero";
 import "./Inicio.css";
 
 const Inicio = () => {
@@ -13,6 +14,7 @@ const Inicio = () => {
       <BannerLanding />
       <ScrollingText />
       <MiNino />
+      <MissionHero />
       <FooterLandingContainer />
     </div>
   );
