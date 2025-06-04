@@ -15,8 +15,8 @@ const Inicio = () => {
       <BannerLanding />
       <ScrollingText />
       <MiNino />
-      <MissionHero />
       <PromoMarkerBanner />
+      <MissionHero />
       <FooterLandingContainer />
     </div>
   );
