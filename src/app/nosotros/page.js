@@ -3,6 +3,7 @@
 import HeaderLandingContainer from "../components/header-landing/HeaderLandingContainer";
 import UnaHistoriaContainer from "./una-historia/UnaHistoriaContainer";
 import TuEresContainer from "./una-historia/TuEresContainer";
+import YoFanNoTengoContainer from "./una-historia/YoFanNoTengoContainer";
 import FooterLandingContainer from "../components/footer-landing/FooterLandingContainer";
 
 export default function Nosotros() {
@@ -11,6 +12,7 @@ export default function Nosotros() {
       <HeaderLandingContainer />
       <UnaHistoriaContainer />
       <TuEresContainer />
+      <YoFanNoTengoContainer />
       <FooterLandingContainer />
     </div>
   );
