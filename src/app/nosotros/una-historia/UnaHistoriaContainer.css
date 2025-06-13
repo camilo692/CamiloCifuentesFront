@@ -1,0 +1,84 @@
+.cabecera {
+    position: relative;
+    width: 100%;
+    height: 935px;
+    background-color: #ffffff; /* Fondo blanco */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+  }
+  
+  .Ellipse-2 {
+    width: 773px;
+    height: 773px;
+    position: absolute;
+    right: 100px; /* Visible hacia el lado derecho */
+    top: 50px;
+    background-color: #ffc600;
+    border-radius: 50%;
+    
+  }
+  
+  .contenido-historia {
+    padding-left: 200px; /* Mueve el contenido más a la izquierda */
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+  }
+  
+  .TENEMOS-UNA-MISIN-CAMBIAR-LA-VIDA-DE-MILES-DE-PERSONAS {
+    font-size: 20px;
+    color: #ffc600;
+    margin-bottom: 20px;
+  }
+  
+  .Una-historia-que-t-haces-posible {
+    font-size: 80px;
+    color: black;
+    font-weight: 900;
+    line-height: 0.94;
+  }
+  
+  .Una-historia-que-t-haces-posible .text-style-1 {
+    color: #ffc600;
+  }
+  
+  .Aqu-el-protagonista-eres-t-y-nuestra-comunidad-unidos-para-hacer-la-diferencia-Toda-ayuda-puede {
+    font-size: 20px;
+    color: #828282;
+    margin-top: 30px;
+    max-width: 600px;
+  }
+  
+  .Rectangle-2 {
+    margin-top: 32px;
+    padding: 14px 21px;
+    background-color: #ffc600;
+    width: fit-content;
+  }
+  
+  .Rectangle-2 button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .iconos-sociales {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+  }
+  
+  .iconos-sociales img {
+    width: 32px;
+    height: 32px;
+  }
+  

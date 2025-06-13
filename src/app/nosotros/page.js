@@ -1,23 +1,16 @@
 "use client";
 
 import HeaderLandingContainer from "../components/header-landing/HeaderLandingContainer";
+import UnaHistoriaContainer from "./una-historia/UnaHistoriaContainer";
+import TuEresContainer from "./una-historia/TuEresContainer";
 import FooterLandingContainer from "../components/footer-landing/FooterLandingContainer";
 
 export default function Nosotros() {
   return (
     <div className="landing-content-container">
       <HeaderLandingContainer />
-      <main className="nosotros-content">
-        <h1>Sobre Nosotros</h1>
-        <div className="nosotros-info">
-          <p>
-            Somos una empresa comprometida con la excelencia y la calidad en todos
-            nuestros productos y servicios. Nuestra misión es proporcionar las
-            mejores soluciones a nuestros clientes.
-          </p>
-          {/* Aquí puedes agregar más contenido sobre tu empresa */}
-        </div>
-      </main>
+      <UnaHistoriaContainer />
+      <TuEresContainer />
       <FooterLandingContainer />
     </div>
   );

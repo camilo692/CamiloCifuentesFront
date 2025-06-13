@@ -1,0 +1,67 @@
+.Rectngulo-5 {
+    width: 100%;/* se adapta al contenido mínimo y cubre pantalla completa si es necesario */
+    padding: 100px 250px 100px 250px; /* ajusta según el diseño */
+
+    box-sizing: border-box; /* importante para que padding no desborde el tamaño */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+.Porque-t-eres-el-protagonista {
+    width: 940px;
+    height: 71px;
+    margin: 0 240px 59px 184px;
+    font-family: PermanentMarker;
+    font-size: 50px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .Porque-t-eres-el-protagonista .text-style-1 {
+    color: #ffc600;
+  }
+  .Creo-firmemente-que-cada-persona-lleva-consigo-una-historia-nica-autntica-y-poderosa-Mi-razn-d {
+    width: 1364px;
+    height: 838px;
+    margin: 59px 0 67px;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .Creo-firmemente-que-cada-persona-lleva-consigo-una-historia-nica-autntica-y-poderosa-Mi-razn-d .text-style-1 {
+    color: #ffc600;
+  }
+  .Bienvenido-a-esta-historia-tu-historia {
+    width: 100%;
+    max-width: 600px; /* Ajusta si lo quieres más estrecho */
+    margin: -30px auto 0 auto; /* Solo 30px arriba y centrado */
+    font-family: Rubik;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+  }
+  
+  
+  .Bienvenido-a-esta-historia-tu-historia .text-style-1 {
+    
+    font-family: PermanentMarker;
+    font-size: 55px;
+    font-weight: normal;
+    color: #ffc600;
+  }
