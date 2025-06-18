@@ -1,66 +1,18 @@
-@media (max-width: 768px) {
-  .header-landing-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-    color: #ffffff;
-    width: 100%;
-    padding: 25px 25%;
-    background-color: #000000e7;
-    position: relative;
-  }
-
-  .nav-buttons {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .cc {
-    margin-right: auto;
-  }
-
-  .logo-carrito {
-    margin-left: auto;
-  }
+/* Estilos generales del header */
+.header-landing-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
+  z-index: 10;
 }
 
-@media (min-width: 768px) {
-  .header-landing-container {
-    height: 100px;
-    background: #000000 0% 0% no-repeat padding-box;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 9rem;
-    background-color: black;
-    width: 100%;
-  }
-
-  .nav-buttons {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .cc {
-    margin-right: auto;
-  }
-
-  .logo-carrito {
-    margin-left: auto;
-  }
-}
-
-.btn {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-
-
-
+/* Logo */
 .logo-cc {
   width: 50px;
   height: 50px;
@@ -72,21 +24,15 @@
   object-fit: contain;
 }
 
+/* Menú horizontal (solo visible en desktop) */
 .nav-buttons {
   display: flex;
   gap: 2rem;
 }
 
 .nav-btn {
-  gap: 10px;
   font-family: Montserrat;
   font-size: 17px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
   background: none;
   border: none;
   color: white;
@@ -99,16 +45,22 @@
   color: #ffd700;
 }
 
+.nav-btn.active {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* Carrito */
 .logo-carrito {
   width: 30px;
   height: 30px;
-  cursor: pointer;
   position: relative;
+  cursor: pointer;
 }
 
 .logo-carrito:hover {
   filter: invert(84%) sepia(24%) saturate(1000%) hue-rotate(359deg)
-    brightness(107%) contrast(107%); /* Esto hará que el icono sea dorado */
+    brightness(107%) contrast(107%);
 }
 
 .cart-counter {
@@ -116,14 +68,72 @@
   bottom: -8px;
   left: -8px;
   background-color: #ffd700;
-  color: #000000;
+  color: #000;
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  font-size: 12px;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  font-weight: bold;
   font-family: Montserrat, sans-serif;
+}
+
+/* Botón hamburguesa (solo visible en móviles) */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menú móvil desplegable */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu .nav-btn {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+}
+
+/* 🎯 Responsive */
+@media (max-width: 768px) {
+  .header-landing-container {
+    height: 60px;
+    padding: 0 1rem;
+  }
+
+
+  .nav-buttons {
+    display: none !important;
+  }
+
+  
+  .hamburger-btn {
+    display: block;
+  }
+
+  .logo-cc,
+  .logo-carrito {
+    width: 40px;
+    height: 40px;
+  }
 }

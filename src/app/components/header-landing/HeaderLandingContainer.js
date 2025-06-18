@@ -4,19 +4,30 @@
 import "./HeaderLandingContainer.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const HeaderLandingContainer = () => {
-  // This would typically come from your cart context/state management
   const cartItemCount = 0;
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <header className="header-landing-container">
       <div className="logo-cc">
         <img src="/cc.png" alt="Cc" className="header-logo" />
       </div>
-      
-      <nav className="nav-buttons">
+
+      {/* Botón hamburguesa para móviles */}
+      <button className="hamburger-btn" onClick={toggleMobileMenu}>
+        ☰
+      </button>
+
+      {/* Navegación visible solo en desktop */}
+      <nav className="nav-buttons desktop-only">
         <Link href="/">
           <button className={`nav-btn ${pathname === "/" ? "active" : ""}`}>
             Inicio
@@ -33,6 +44,21 @@ const HeaderLandingContainer = () => {
           </button>
         </Link>
       </nav>
+
+      {/* Menú desplegable visible solo en móviles si está abierto */}
+      {menuOpen && (
+        <div className="mobile-menu">
+          <Link href="/" onClick={() => setMenuOpen(false)}>
+            <p className="mobile-menu-item">Inicio</p>
+          </Link>
+          <Link href="/nosotros" onClick={() => setMenuOpen(false)}>
+            <p className="mobile-menu-item">Nosotros</p>
+          </Link>
+          <Link href="/tienda" onClick={() => setMenuOpen(false)}>
+            <p className="mobile-menu-item">Tienda</p>
+          </Link>
+        </div>
+      )}
 
       <div className="logo-carrito">
         <img src="/carrito de compra.png" alt="Logo carrito" className="header-logo" />
