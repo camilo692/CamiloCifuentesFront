@@ -2,7 +2,6 @@
 "use client";
 
 import "./HeaderLandingContainer.css";
-import { useTheme } from "@/app/providers/ThemeContext";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

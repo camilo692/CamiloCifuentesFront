@@ -1,7 +1,6 @@
 "use client";
 import LandingContent from "@/app/components/landing-content/LandingContent";
 import "./MainLandingModule.css";
-import { useTheme } from "@/app/providers/ThemeContext";
 import Inicio from "@/app/components/inicio/Inicio";
 
 function MainLandingModule({ }) {

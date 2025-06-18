@@ -18,10 +18,9 @@ const TuEresContainer = () => {
           <p>
             Creo firmemente que cada persona lleva consigo una historia única,
             <span className="text-style-1"> auténtica y poderosa.</span>
-            <div style={{ marginBottom: "2rem" }}></div>
-            
-
           </p>
+          <div style={{ marginBottom: "2rem" }}></div>
+          
           <p>
             Mi razón de existir es darte voz, visibilidad y reconocimiento a ti y a todos aquellos que habitualmente no tienen una plataforma para ser escuchados. Aquí, tú y todas las personas que aparecen en cada historia son los verdaderos protagonistas, inspirando cambios positivos. Creo en la generosidad, no solo material, sino también en la alegría, el tiempo y el afecto que compartimos, demostrando que la verdadera riqueza está en nuestro espíritu solidario.
           </p>

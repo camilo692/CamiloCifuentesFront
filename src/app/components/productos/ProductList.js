@@ -1,77 +1,111 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
+import productService from "../../services/productService";
 import "./Productos.css";
 
-const mockProductos = [
-  {
-    id: 1,
-    nombre: "Hoodie Mi Niño",
-    precio: "100.000",
-    genero: "unisex",
-    categoria: "Categoria 1",
-    etiqueta: "nuevo",
-  },{
-    id: 5,
-    nombre: "Hoodie Mi Niños",
-    precio: "100.000",
-    genero: "unisex",
-    categoria: "Categoria 1",
-    etiqueta: "nuevo",
-  },
-  {
-    id: 2,
-    nombre: "Hoodie Mi Niño",
-    precio: "100.000",
-    genero: "unisex",
-    categoria: "Categoria 2",
-    etiqueta: "nuevo",
-  },
-  {
-    id: 3,
-    nombre: "Hoodie Mi Niño",
-    precio: "100.000",
-    genero: "unisex",
-    categoria: "Categoria 3",
-    etiqueta: "nuevo",
-  },
-  {
-    id: 4,
-    nombre: "Hoodie Mi Niño",
-    precio: "100.000",
-    genero: "unisex",
-    categoria: "Categoria 1",
-    etiqueta: "nuevo",
-  },
-];
-
-const categorias = ["Categoria 1", "Categoria 2", "Categoria 3"];
-
 export default function ProductList() {
-  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(categorias[0]);
+  const [productos, setProductos] = useState([]);
+  const [categorias, setCategorias] = useState([]);
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const productosFiltrados = mockProductos.filter(
-    (p) => p.categoria === categoriaSeleccionada
-  );
+  useEffect(() => {
+    loadInitialData();
+  }, []);
+
+  const loadInitialData = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      // Cargar categorías y productos en paralelo
+      const [categoriasData, productosData] = await Promise.all([
+        productService.getCategories(),
+        productService.getProducts()
+      ]);
+      
+      setCategorias(categoriasData);
+      setProductos(productosData);
+      
+      // Seleccionar la primera categoría por defecto
+      if (categoriasData.length > 0) {
+        setCategoriaSeleccionada(categoriasData[0]._id);
+      }
+    } catch (err) {
+      console.error('Error loading data:', err);
+      setError('Error al cargar los productos. Por favor, intenta de nuevo.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleCategoriaChange = async (categoriaId) => {
+    try {
+      setCategoriaSeleccionada(categoriaId);
+      setLoading(true);
+      
+      const productosFiltrados = await productService.getProductsByCategory(categoriaId);
+      setProductos(productosFiltrados);
+    } catch (err) {
+      console.error('Error filtering products:', err);
+      setError('Error al filtrar los productos. Por favor, intenta de nuevo.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading && productos.length === 0) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner">Cargando productos...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="error-container">
+        <p className="error-message">{error}</p>
+        <button onClick={loadInitialData} className="retry-button">
+          Intentar de nuevo
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div>
       <div className="categorias-filtros">
-        {categorias.map((cat) => (
+        {categorias.map((categoria) => (
           <button
-            key={cat}
-            className={`categoria-btn${cat === categoriaSeleccionada ? " selected" : ""}`}
-            onClick={() => setCategoriaSeleccionada(cat)}
-            disabled={cat === categoriaSeleccionada}
+            key={categoria._id}
+            className={`categoria-btn${categoria._id === categoriaSeleccionada ? " selected" : ""}`}
+            onClick={() => handleCategoriaChange(categoria._id)}
+            disabled={categoria._id === categoriaSeleccionada || loading}
           >
-            {cat}
+            {categoria.name}
           </button>
         ))}
       </div>
+      
+      {loading && (
+        <div className="loading-container">
+          <div className="loading-spinner">Cargando...</div>
+        </div>
+      )}
+      
       <div className="productos-grid">
-        {productosFiltrados.map((producto) => (
-          <ProductCard key={producto.id} producto={producto} />
+        {productos.map((producto) => (
+          <ProductCard key={producto._id || producto.id} producto={producto} />
         ))}
       </div>
+      
+      {!loading && productos.length === 0 && (
+        <div className="no-products">
+          <p>No se encontraron productos en esta categoría.</p>
+        </div>
+      )}
     </div>
   );
 } 

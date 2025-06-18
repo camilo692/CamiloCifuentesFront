@@ -7,7 +7,7 @@ import ProductList from "../components/productos/ProductList";
 
 export default function Tienda() {
   return (
-    <div className="landing-content-container">
+    <div className="store-content-container">
       <HeaderLandingContainer />
       <ScrollingText />
       <div className="productos-grid">
