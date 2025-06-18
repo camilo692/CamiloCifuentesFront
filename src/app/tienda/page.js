@@ -2,18 +2,17 @@
 
 import HeaderLandingContainer from "../components/header-landing/HeaderLandingContainer";
 import FooterLandingContainer from "../components/footer-landing/FooterLandingContainer";
+import ScrollingText from "../components/scrolling-text/ScrollingText";
+import ProductList from "../components/productos/ProductList";
 
 export default function Tienda() {
   return (
     <div className="landing-content-container">
       <HeaderLandingContainer />
-      <main className="tienda-content">
-        <h1>Nuestra Tienda</h1>
-        <div className="productos-grid">
-          {/* Aquí puedes agregar tu grid de productos */}
-          <p>Próximamente: Catálogo de productos</p>
-        </div>
-      </main>
+      <ScrollingText />
+      <div className="productos-grid">
+        <ProductList />
+      </div>
       <FooterLandingContainer />
     </div>
   );
