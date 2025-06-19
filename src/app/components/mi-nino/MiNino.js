@@ -7,8 +7,8 @@ const MiNino = () => {
     <div className="mi-nino-container">
       <div className="mi-nino-content">
         <Image
-          src="/bannerMiNiño.png"
-          alt="Yo Afán No Tengo - Mi Niño"
+          src="/bannerMiNino.png"
+          alt="Yo Afán No Tengo"
           fill
           className="mi-nino-background"
           priority

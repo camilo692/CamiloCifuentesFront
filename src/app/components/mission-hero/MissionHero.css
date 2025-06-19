@@ -10,6 +10,7 @@
   width: 100%;
   height: 90vh;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .mission-content {
@@ -19,6 +20,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .mission {
@@ -32,7 +35,7 @@
   font-weight: normal;
   line-height: 1.2;
   text-align: left;
-  color: #000;
+  color: #fff;
 }
 
 .mission-subtitle {
@@ -42,7 +45,7 @@
   font-weight: 900;
   line-height: 1.2;
   text-align: left;
-  color: #000;
+  color: #fff;
 }
 
 .highlight {
@@ -55,7 +58,7 @@
   font-size: clamp(16px, 2vw, 18px);
   line-height: 1.5;
   text-align: left;
-  color: #828282;
+  color: #fff;
   max-width: 500px;
 }
 
@@ -70,9 +73,6 @@
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: Montserrat;
-  font-weight: bold;
-  text-align: left;
   color: #fff;
 }
 
@@ -87,12 +87,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 50%;
+  position: relative;
+  z-index: 2;
 }
 
-/* Responsive styles */
+.banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+ 
+}
+
+/* -------------------- Responsive -------------------- */
+
 @media (max-width: 992px) {
   .mission-content {
     padding: 3rem;
+    max-width: 100%;
+  }
+
+  .mission-carousel {
+    max-width: 100%;
+  }
+  .banner-background {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -100,11 +125,12 @@
   .mission-hero-container {
     flex-direction: column;
     height: auto;
+    padding: 2rem 1.5rem;
   }
 
   .mission-content {
+    padding: 2rem 1rem;
     max-width: 100%;
-    padding: 3rem 2rem;
   }
 
   .mission {
@@ -119,13 +145,20 @@
   }
 
   .mission-description {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 2rem;
   }
 
   .mission-carousel {
     width: 100%;
-    height: 400px;
+    height: auto;
+    max-height: 400px;
+    padding-top: 1rem;
+  }
+  .banner-background {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -133,4 +166,35 @@
   .mission-hero-container {
     padding: 1.5rem 1rem;
   }
-} 
+
+  .mission-title {
+    font-size: 1.5rem;
+  }
+
+  .mission-subtitle {
+    font-size: 2rem;
+  }
+
+  .mission-description {
+    font-size: 1rem;
+  }
+
+  .nosotros-btn {
+    font-size: 0.85rem;
+    padding: 10px 14px;
+    min-width: 140px;
+    max-width: 70%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+  .banner-background {
+   
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+   
+   
+  }
+}

@@ -5,17 +5,9 @@
     width: 100%;
     height: 90vh;
     overflow: hidden;
+    background-color: #ffffff;
 }
 
-.banner-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
 
 
 .banner-content {
@@ -31,7 +23,7 @@
 
 .banner-text {
     max-width: 800px;
-    color: var(--unnamed-color-ffffff);
+    color: #000000;
 }
 
 .impact-text {
@@ -41,7 +33,7 @@
     font-size: var(--unnamed-font-size-40);
     line-height: var(--unnamed-line-spacing-58);
     letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-ffffff);
+    color: #000000;
     margin-bottom: 0.5rem;
     text-transform: none;
 }
@@ -53,7 +45,7 @@
     font-size: var(--unnamed-font-size-72);
     line-height: 1.1;
     letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-ffffff);
+    color: #000000;
     text-transform: var(--unnamed-text-transform-uppercase);
     margin-bottom: 2rem;
 }
@@ -70,7 +62,7 @@
     font-size: var(--unnamed-font-size-17);
     line-height: var(--unnamed-line-spacing-24);
     letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-ffffff);
+    color: #000000;
     margin-bottom: 3rem;
     max-width: 600px;
 }
@@ -82,7 +74,7 @@
     font-size: var(--unnamed-font-size-18);
     line-height: var(--unnamed-line-spacing-22);
     letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-000000);
+    color: var(--unnamed-color-ffffff);
     background-color: var(--unnamed-color-ffc600);
     padding: 0.8rem 2rem;
     border: none;
@@ -111,7 +103,6 @@
 .social-icon-banner {
     width: 40px;
     height: 40px;
-   
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -124,66 +115,104 @@
     background-color: var(--unnamed-color-ffffff);
 }
 
-
 .social-icon:hover img {
     filter: none;
 }
 
-@media (max-width: 1200px) {
+/* -------------------- RESPONSIVE -------------------- */
+
+@media (max-width: 1024px) {
     .banner-content {
+        flex-direction: column;
+        justify-content: center;
         padding: 2rem;
+        text-align: center;
+    }
+
+    .banner-text {
+        max-width: 100%;
+        padding: 0 1rem;
     }
 
     .main-title {
-        font-size: var(--unnamed-font-size-50);
-        line-height: 1.2;
+        font-size: 3rem;
+    }
+
+    .impact-text {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
     .banner-landing-container {
-        height: 100vh;
+        height: auto;
     }
 
-    .banner-landing-container::after {
-        background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.95) 0%,
-            rgba(0, 0, 0, 0.8) 50%,
-            rgba(0, 0, 0, 0.6) 100%
-        );
-    }
-
-    .banner-background {
-        width: 100%;
-        opacity: 1;
-    }
-
-    .banner-text {
+    .banner-content {
+        padding: 1.5rem 1rem;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        margin: 0 auto;
-    }
-
-    .description {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .social-icons-banner {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 2rem;
-        transform: none;
-    }
-
-    .impact-text {
-        font-size: var(--unnamed-font-size-40);
-        line-height: 1.2;
     }
 
     .main-title {
-        font-size: var(--unnamed-font-size-40);
-        line-height: 1.2;
+        font-size: 2.2rem;
+    }
+
+    .impact-text {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        max-width: 100%;
+        margin: 0 auto 2rem;
+    }
+
+    .store-button {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .social-icons-banner {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2rem;
+        position: static;
+        transform: none;
+    }
+
+    .social-icon-banner {
+        width: 36px;
+        height: 36px;
+    }
+
+    .banner-background {
+        object-position: center top;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .impact-text {
+        font-size: 1.3rem;
+    }
+
+    .store-button {
+        font-size: 0.85rem;
+        padding: 10px 14px;
+        min-width: 140px;
+        max-width: 70%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+
+    .banner-content {
+        padding: 1rem;
     }
 }
