@@ -19,13 +19,18 @@ class ProductService {
 
   async getProductsByCategory(categoryId) {
     try {
-      const response = await fetch(`${API_BASE_URL}/products?category=${encodeURIComponent(categoryId)}`);
+      console.log('Enviando petición para categoría ID:', categoryId);
+      const url = `${API_BASE_URL}/products/category/${categoryId}`;
+      console.log('URL de la petición:', url);
+      
+      const response = await fetch(url);
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       
       const data = await response.json();
+      console.log('Productos recibidos para categoría', categoryId, ':', data.length);
       return data;
     } catch (error) {
       console.error('Error fetching products by category:', error);
@@ -58,6 +63,7 @@ class ProductService {
       }
       
       const data = await response.json();
+      console.log('Categorías cargadas:', data.map(cat => ({ id: cat._id, name: cat.name })));
       return data;
     } catch (error) {
       console.error('Error fetching categories:', error);
