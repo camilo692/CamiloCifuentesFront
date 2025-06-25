@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin: 2rem;
 }
 
 .categoria-btn {
@@ -40,8 +39,6 @@
   }
 }
 
-
-
 .productos-grid {
   background-color: #f5f5f5;
   display: grid;
@@ -50,6 +47,37 @@
   padding: 2rem 0;
 }
 
+/* Desktop: máximo 4 productos por fila */
+@media (min-width: 1200px) {
+  .productos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet: máximo 3 productos por fila */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móvil: máximo 2 productos por fila */
+@media (max-width: 767px) {
+  .productos-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+}
+
+/* Móvil pequeño: 1 producto por fila */
+@media (max-width: 480px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .product-card {
   background: white;
@@ -60,8 +88,8 @@
   flex-direction: column;
   align-items: flex-start;
   min-width: 320px;
-  max-width: 480px;
-  min-height: 480px;
+  max-width: 100%;
+  min-height: 500px;
 }
 
 .product-image-placeholder {
