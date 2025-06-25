@@ -12,9 +12,9 @@ const Inicio = () => {
   return (
     <div className="landing-content-container">
       <HeaderLandingContainer />
+      <MiNino />
       <BannerLanding />
       <ScrollingText />
-      <MiNino />
       <PromoMarkerBanner />
       <MissionHero />
       <FooterLandingContainer />

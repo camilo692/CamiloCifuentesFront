@@ -21,9 +21,7 @@ const MissionHero = () => {
         </div>
       </div>
       
-      <div className="mission-carousel">
-        <MissionCarousel />
-      </div>
+      <img src="/fondo.png" alt="Banner landing" className="banner-background" /> 
     </div>
   );
 };
