@@ -26,12 +26,10 @@ export default function ProductList() {
       ]);
       
       setCategorias(categoriasData);
-      setProductos(productosData);
       
-      // Seleccionar la primera categoría por defecto
-      if (categoriasData.length > 0) {
-        setCategoriaSeleccionada(categoriasData[0]._id);
-      }
+      // Por defecto mostrar todos los productos (sin categoría seleccionada)
+      setCategoriaSeleccionada("");
+      setProductos(productosData);
     } catch (err) {
       console.error('Error loading data:', err);
       setError('Error al cargar los productos. Por favor, intenta de nuevo.');
@@ -42,11 +40,26 @@ export default function ProductList() {
 
   const handleCategoriaChange = async (categoriaId) => {
     try {
+      console.log('Cambiando a categoría:', categoriaId);
       setCategoriaSeleccionada(categoriaId);
       setLoading(true);
       
-      const productosFiltrados = await productService.getProductsByCategory(categoriaId);
-      setProductos(productosFiltrados);
+      // Limpiar la lista de productos inmediatamente
+      setProductos([]);
+      
+      // Si se selecciona "Todas las categorías" (categoriaId vacío o null)
+      if (!categoriaId) {
+        console.log('Cargando todos los productos...');
+        const todosLosProductos = await productService.getProducts();
+        console.log('Productos cargados:', todosLosProductos.length);
+        setProductos(todosLosProductos);
+      } else {
+        // Filtrar por categoría específica
+        console.log('Filtrando productos por categoría:', categoriaId);
+        const productosFiltrados = await productService.getProductsByCategory(categoriaId);
+        console.log('Productos filtrados:', productosFiltrados.length);
+        setProductos(productosFiltrados);
+      }
     } catch (err) {
       console.error('Error filtering products:', err);
       setError('Error al filtrar los productos. Por favor, intenta de nuevo.');
@@ -77,6 +90,13 @@ export default function ProductList() {
   return (
     <div>
       <div className="categorias-filtros">
+        <button
+          className={`categoria-btn${!categoriaSeleccionada ? " selected" : ""}`}
+          onClick={() => handleCategoriaChange("")}
+          disabled={!categoriaSeleccionada || loading}
+        >
+          Todas las categorías
+        </button>
         {categorias.map((categoria) => (
           <button
             key={categoria._id}
@@ -91,12 +111,12 @@ export default function ProductList() {
       
       {loading && (
         <div className="loading-container">
-          <div className="loading-spinner">Cargando...</div>
+          <div className="loading-spinner">Filtrando productos...</div>
         </div>
       )}
       
       <div className="productos-grid">
-        {productos.map((producto) => (
+        {!loading && productos.map((producto) => (
           <ProductCard key={producto._id || producto.id} producto={producto} />
         ))}
       </div>
