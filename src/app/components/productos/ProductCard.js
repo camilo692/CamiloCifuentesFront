@@ -1,9 +1,9 @@
 import React from "react";
 import "./Productos.css";
 
-export default function ProductCard({ producto }) {
+export default function ProductCard({ producto, onClick }) {
   return (
-    <div className="product-card producto">
+    <div className="product-card producto" onClick={onClick} style={{ cursor: 'pointer' }}>
       <div className="product-image-placeholder">
         {producto.imagen ? (
           <img src={producto.imagen} alt={producto.nombre} />
