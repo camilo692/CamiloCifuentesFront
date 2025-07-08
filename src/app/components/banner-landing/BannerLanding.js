@@ -51,7 +51,7 @@ const BannerLanding = () => {
                     <img src="/youtube.png" alt="YouTube" />
                 </a>
             </div>
-            <img src="/fondo.png" alt="Banner landing" className="banner-background" />
+            {/* <img src="/fondo.png" alt="Banner landing" className="banner-background" /> */}
         </div>
     );
 };

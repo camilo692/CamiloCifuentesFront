@@ -3,8 +3,8 @@
 import HeaderLandingContainer from "../components/header-landing/HeaderLandingContainer";
 import UnaHistoriaContainer from "./una-historia/UnaHistoriaContainer";
 import TuEresContainer from "./una-historia/TuEresContainer";
-import YoFanNoTengoContainer from "./una-historia/YoFanNoTengoContainer";
 import FooterLandingContainer from "../components/footer-landing/FooterLandingContainer";
+import MiNino from "../components/mi-nino/MiNino";
 
 export default function Nosotros() {
   return (
@@ -12,7 +12,7 @@ export default function Nosotros() {
       <HeaderLandingContainer />
       <UnaHistoriaContainer />
       <TuEresContainer />
-      <YoFanNoTengoContainer />
+      <MiNino />
       <FooterLandingContainer />
     </div>
   );

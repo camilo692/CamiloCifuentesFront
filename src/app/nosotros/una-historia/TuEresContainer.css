@@ -65,3 +65,56 @@
     font-weight: normal;
     color: #ffc600;
   }
+
+  @media (max-width: 1024px) {
+    .Rectngulo-5 {
+      padding: 80px 60px;
+    }
+  
+    .Porque-t-eres-el-protagonista {
+      width: 100%;
+      font-size: 42px;
+      margin: 0 auto 40px;
+    }
+  
+    .Creo-firmemente-que-cada-persona-lleva-consigo-una-historia-nica-autntica-y-poderosa-Mi-razn-d {
+      width: 100%;
+      height: auto;
+      font-size: 24px;
+      padding: 0 20px;
+    }
+  
+    .Bienvenido-a-esta-historia-tu-historia {
+      font-size: 40px;
+    }
+  
+    .Bienvenido-a-esta-historia-tu-historia .text-style-1 {
+      font-size: 45px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .Rectngulo-5 {
+      padding: 60px 20px;
+    }
+  
+    .Porque-t-eres-el-protagonista {
+      font-size: 32px;
+      margin: 0 0 30px;
+    }
+  
+    .Creo-firmemente-que-cada-persona-lleva-consigo-una-historia-nica-autntica-y-poderosa-Mi-razn-d {
+      font-size: 20px;
+      padding: 0 10px;
+      margin: 40px 0;
+    }
+  
+    .Bienvenido-a-esta-historia-tu-historia {
+      font-size: 28px;
+    }
+  
+    .Bienvenido-a-esta-historia-tu-historia .text-style-1 {
+      font-size: 32px;
+    }
+  }
+  

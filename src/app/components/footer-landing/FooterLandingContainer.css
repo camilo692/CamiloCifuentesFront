@@ -1,113 +1,273 @@
+/* Contenedor principal del footer */
 .footer-container {
-    background-color:#FFC600;
-    padding: 40px 20px;
-    color: #333;
-    font-family: sans-serif;
-  
-  }
-  
+  background-color: #FFC600;
+  padding: 40px 20px;
+  color: #333;
+  font-family: sans-serif;
+}
+
+/* Contenido interno del footer con distribución horizontal y centrado */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Secciones individuales del footer */
+.footer-section {
+  min-width: 200px;
+  margin: 10px 0;
+}
+
+/* Título de cada sección */
+.footer-section h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Logo del footer */
+.footer-logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Texto centrado si se usa en alguna sección */
+.footer-center {
+  text-align: center;
+}
+
+/* Íconos sociales */
+.social-icons-footer a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.social-icons-footer a:hover {
+  transform: scale(1.2);
+  color: #555;
+}
+
+/* Imagen de íconos sociales */
+.social-icons-footer img {
+  width: 31px;
+  height: 31px;
+  opacity: 1;
+}
+
+/* Texto izquierdo inferior (ej: derechos reservados) */
+.footer-left-text {
+  font: normal normal normal 16px/21px Roboto;
+  letter-spacing: 0px;
+  color: #565656;
+  text-align: left;
+  opacity: 1;
+  width: 208px;
+  height: 19px;
+}
+
+/* Contenedor de sección izquierda del footer */
+.footer-section-left {
+  margin-top: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Menú de navegación en el footer */
+.footer-section-menu {
+  width: 181px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Título del menú */
+.footer-menu-title {
+  width: 181px;
+  height: 24px;
+  font: normal normal bold 20px/24px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+  text-align: right;
+  opacity: 1;
+}
+
+/* Ítems del menú */
+.footer-menu-item {
+  width: 172px;
+  height: 20px;
+  font: normal normal normal 16px/19px Montserrat;
+  letter-spacing: 0px;
+  color: #565656;
+  text-align: right;
+  opacity: 1;
+}
+
+/* Contenedor de redes sociales (alineado horizontalmente) */
+.social-icons-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* ------------------------------
+   MEDIA QUERIES PARA RESPONSIVE
+--------------------------------*/
+
+/* --- DESKTOP --- */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-section-left {
+  margin-top: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-section-menu {
+  width: 181px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* --- RESPONSIVE: Mantener horizontal en móvil/tablet --- */
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-   
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .footer-section {
-    min-width: 200px;
-    margin: 10px 0;
-  }
-  
-  .footer-section h4 {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .footer-logo {
-    width: 180px;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
-  .footer-center {
-    text-align: center;
-  }
-  
-  .social-icons-footer a {
-    margin: 0 10px;
-    font-size: 24px;
-    color: #000;
-    text-decoration: none;
-    transition: transform 0.2s;
-  }
-  
-  .social-icons-footer a:hover {
-    transform: scale(1.2);
-    color: #555;
-  }
-  
-  .social-icons-footer img {
-    width: 31px;
-    height: 31px;
-    opacity: 1;
-  }
-  
-  .footer-left-text {
-    font: normal normal normal 16px/21px Roboto;
-    letter-spacing: 0px;
-    color: #565656;
-    text-align: left;
-    opacity: 1;
-    width: 208px;
-    height: 19px;
-  }
-  
-  .footer-section-left {
-    width: 208px;
-    height: 19px;
-    font: normal normal normal 16px/21px Roboto;
-    letter-spacing: 0px;
-    color: #565656;
-    text-align: left;
-    opacity: 1;
-    align-items: flex-start;
-    margin-top: 100px;
-    padding-left: 40px;
-  }
-  
-  .footer-section-menu {
-    width: 181px;
-  }
-  
-  .footer-menu-title {
-    width: 181px;
-    height: 24px;
-    font: normal normal bold 20px/24px Montserrat;
-    letter-spacing: 0px;
-    color: #000000;
-    text-align: right;
-    opacity: 1;
-  }
-  
-  .footer-menu-item {
-    width: 172px;
-    height: 20px;
-    font: normal normal normal 16px/19px Montserrat;
-    letter-spacing: 0px;
-    color: #565656;
-    text-align: right;
-    opacity: 1;
-  }
-  
-  .social-icons-footer {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .footer-section,
+  .footer-section-left,
+  .footer-section-menu {
+    width: auto;
+    max-width: none;
+    margin-top: 0;
+    padding-left: 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .footer-center {
+    order: 1;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .footer-section-menu {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    margin-left: auto;
+  }
+  .footer-section-left {
+    order: 3;
+    align-items: flex-end;
+    text-align: right;
+    margin-left: auto;
+    margin-top: 60px;
+  }
+}
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 31.28%;
+    height: 52.56%;
+    margin: 0 3.6px 0.2px 0;
+    object-fit: contain;
+  }
+  .social-icons-footer {
     margin-top: 15px;
   }
-  
+  .social-icons-footer img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 8px;
+    gap: 0;
+  }
+  .footer-center {
+    order: 1;
+    align-items: flex-start;
+    text-align: left;
+    width: 48%;
+    min-width: 140px;
+  }
+  .footer-logo {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 140px;
+    margin-bottom: 8px;
+  }
+  .social-icons-footer img {
+    width: 20px;
+    height: 20px;
+  }
+  .footer-section-menu {
+    order: 2;
+    align-items: flex-end;
+    text-align: right;
+    width: 48%;
+    min-width: 140px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .footer-menu-title {
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .footer-menu-item {
+    font-size: 13px;
+    margin-bottom: 1px;
+  }
+  .footer-section-left {
+    order: 3;
+    align-items: flex-end;
+    text-align: right;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  .footer-left-text {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-bottom: 1px;
+    width: auto;
+    height: auto;
+  }
+}
+
+
+

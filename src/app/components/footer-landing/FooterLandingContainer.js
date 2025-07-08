@@ -2,6 +2,7 @@
 "use client";
 
 import "./FooterLandingContainer.css";
+import Link from 'next/link';
 
 
 const FooterLandingContainer = () => {
@@ -44,10 +45,10 @@ const FooterLandingContainer = () => {
         {/* Columna derecha */}
         <div className="footer-section footer-section-menu">
           <h4 className="footer-menu-title">Menú</h4>
-          <p className="footer-menu-item">inicio</p>
-          <p className="footer-menu-item">nosotros</p>
-          <p className="footer-menu-item">tienda</p>
-          <p className="footer-menu-item">carrito</p>
+          <Link href="/" className="footer-menu-item">inicio</Link>
+          <Link href="/nosotros" className="footer-menu-item">nosotros</Link>
+          <Link href="/tienda" className="footer-menu-item">tienda</Link>
+          <Link href="/carrito" className="footer-menu-item">carrito</Link>
         </div>
 
       </div>
