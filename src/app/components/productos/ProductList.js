@@ -50,6 +50,7 @@ export default function ProductList() {
 
   const handleCategoriaChange = async (categoriaId) => {
     try {
+      setProductoSeleccionado(null); // Cierra el detalle al cambiar de categoría
       console.log('Cambiando a categoría:', categoriaId);
       setCategoriaSeleccionada(categoriaId);
       setLoading(true);
