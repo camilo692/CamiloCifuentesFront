@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ProductCard from "./ProductCard";
 import productService from "../../services/productService";
 import "./Productos.css";
+import ProductDetail from "./ProductDetail";
 
 export default function ProductList() {
   const [productos, setProductos] = useState([]);
@@ -9,6 +10,15 @@ export default function ProductList() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [productoSeleccionado, setProductoSeleccionado] = useState(null);
+  const detalleRef = useRef(null);
+
+  // Scroll suave al mostrar el detalle
+  useEffect(() => {
+    if (productoSeleccionado && detalleRef.current) {
+      detalleRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [productoSeleccionado]);
 
   useEffect(() => {
     loadInitialData();
@@ -115,9 +125,21 @@ export default function ProductList() {
         </div>
       )}
       
+      {productoSeleccionado && (
+        <div className="product-detail-top" ref={detalleRef}>
+          <ProductDetail
+            producto={productoSeleccionado}
+            onClose={() => setProductoSeleccionado(null)}
+          />
+        </div>
+      )}
       <div className="productos-grid">
         {!loading && productos.map((producto) => (
-          <ProductCard key={producto._id || producto.id} producto={producto} />
+          <ProductCard
+            key={producto._id || producto.id}
+            producto={producto}
+            onClick={() => setProductoSeleccionado(producto)}
+          />
         ))}
       </div>
       
