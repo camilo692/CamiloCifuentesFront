@@ -80,9 +80,9 @@
 }
 
 .product-card {
-  background: white;
+  /* background: white; */
   border-radius: 8px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  /* box-shadow: 0 1px 6px rgba(0,0,0,0.04); */
   padding: 2rem 2rem 1.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -121,9 +121,16 @@
 }
 
 .product-name {
+  font-family: Montserrat;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #222;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
 }
 
 .product-tag {
@@ -133,7 +140,14 @@
   padding: 0.2rem 1rem;
   border-radius: 3px;
   margin-left: 0.5rem;
-  font-weight: 500;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  font-family: Montserrat;
+  color: #fff;
 }
 
 .product-meta {
@@ -146,6 +160,14 @@
 
 .product-gender {
   color: #bdbdbd;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #828282;
 }
 
 .product-price {
