@@ -341,29 +341,65 @@
   gap: 1.2rem;
 }
 .product-detail-title {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
 }
 .product-detail-gender {
-  color: #888;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #828282;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 .product-detail-price {
   font-size: 2rem;
   font-weight: 700;
-  color: #222;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
   margin-bottom: 0.5rem;
 }
 .product-detail-shortdesc {
   font-size: 1.1rem;
-  color: #444;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
   margin-bottom: 0.5rem;
 }
 .product-detail-description {
   font-size: 1rem;
-  color: #222;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
   margin-bottom: 1rem;
 }
 .product-detail-tallas {
@@ -376,12 +412,20 @@
   font-weight: 600;
   margin-bottom: 0.7rem;
   background: #fff;
+  color: #000;
+  font-family: Montserrat;
 }
 .tallas-list {
   display: flex;
   gap: 0.7rem;
 }
 .talla-btn {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  font-family: Montserrat;
   border: 2px solid #bdbdbd;
   background: #fff;
   color: #222;
@@ -400,7 +444,6 @@
 }
 .agregar-carrito-btn {
   background: #ffd600;
-  color: #fff;
   font-size: 1.1rem;
   font-weight: 700;
   border: none;
@@ -409,6 +452,14 @@
   margin: 1.2rem 0 0.7rem 0;
   cursor: pointer;
   transition: background 0.2s;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
 }
 .agregar-carrito-btn:hover {
   background: #ffb300;
