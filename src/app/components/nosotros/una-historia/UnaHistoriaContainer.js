@@ -7,7 +7,7 @@ import localFont from "next/font/local";
 const rubik = Rubik({ subsets: ["latin"], weight: ["900"] });
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["400"] });
 const permanentMarker = localFont({
-  src: "../../fonts/PermanentMarker-Regular.ttf",
+  src: "../../../fonts/PermanentMarker-Regular.ttf",
 });
 
 const UnaHistoriaContainer = () => {
