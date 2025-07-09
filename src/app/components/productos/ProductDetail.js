@@ -1,12 +1,22 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./Productos.css";
+import { useCart } from "../../providers/CartContext";
 
 export default function ProductDetail({ producto, onClose }) {
   if (!producto) return null;
 
-  // Simulación de imágenes adicionales
+  const { addToCart } = useCart();
   const images = producto.imagenes || [producto.imagen, producto.imagen, producto.imagen];
   const tallas = producto.tallas || ["S", "M", "L", "XL", "XXL"];
+  const [tallaSeleccionada, setTallaSeleccionada] = useState(tallas[0]);
+  const [agregado, setAgregado] = useState(false);
+
+  function handleAddToCart() {
+    addToCart(producto, 1, tallaSeleccionada);
+    setAgregado(true);
+    setTimeout(() => setAgregado(false), 1200);
+  }
 
   return (
     <div className="product-detail-block">
@@ -37,15 +47,24 @@ export default function ProductDetail({ producto, onClose }) {
             <div className="tabla-tallas">TABLA DE TALLAS</div>
             <div className="tallas-list">
               {tallas.map((t, idx) => (
-                <button key={t} className="talla-btn">{t}</button>
+                <button
+                  key={t}
+                  className={`talla-btn${t === tallaSeleccionada ? " selected" : ""}`}
+                  onClick={() => setTallaSeleccionada(t)}
+                >
+                  {t}
+                </button>
               ))}
             </div>
           </div>
-          <button className="agregar-carrito-btn">AGREGAR AL CARRITO</button>
+          <button className="agregar-carrito-btn" onClick={handleAddToCart} disabled={agregado}>
+            {agregado ? "¡Agregado!" : "AGREGAR AL CARRITO"}
+          </button>
           <div className="product-detail-envios">
             Envíos a toda Colombia<br />
             Métodos de pago: tarjeta de crédito, débito, PSE.
           </div>
+          <button className="product-detail-close-inline" onClick={onClose}>Cerrar</button>
         </div>
       </div>
     </div>

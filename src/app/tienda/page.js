@@ -1,19 +1,10 @@
 "use client";
 
-import HeaderLandingContainer from "../components/header-landing/HeaderLandingContainer";
-import FooterLandingContainer from "../components/footer-landing/FooterLandingContainer";
-import ScrollingText from "../components/scrolling-text/ScrollingText";
-import ProductList from "../components/productos/ProductList";
+import TiendaContainer from "../components/tienda/TiendaContainer";
 
-export default function Tienda() {
+export default function TiendaPage() {
   return (
-    <div className="store-content-container">
-      <HeaderLandingContainer />
-      <ScrollingText />
-      <div className="productos-grid">
-        <ProductList />
-      </div>
-      <FooterLandingContainer />
-    </div>
+    <TiendaContainer />
   );
 } 
+

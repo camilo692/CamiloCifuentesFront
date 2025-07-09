@@ -5,9 +5,11 @@ import "./HeaderLandingContainer.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useCart } from "../../providers/CartContext";
 
 const HeaderLandingContainer = () => {
-  const cartItemCount = 0;
+  const { cart } = useCart();
+  const cartItemCount = cart.reduce((sum, item) => sum + item.cantidad, 0);
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -61,7 +63,9 @@ const HeaderLandingContainer = () => {
       )}
 
       <div className="logo-carrito">
-        <img src="/carrito de compra.png" alt="Logo carrito" className="header-logo" />
+        <Link href="/tienda/carrito">
+          <img src="/carrito de compra.png" alt="Logo carrito" className="header-logo" style={{ cursor: 'pointer' }} />
+        </Link>
         <span className="cart-counter">{cartItemCount}</span>
       </div>
     </header>
