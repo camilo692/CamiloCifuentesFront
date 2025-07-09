@@ -11,11 +11,6 @@ export default function Tienda() {
     <div className="store-content-container">
       <HeaderLandingContainer />
       <ScrollingText />
-      <div style={{ textAlign: 'right', marginBottom: '1.5rem' }}>
-        <Link href="/tienda/carrito">
-          <button className="carrito-ir-btn">Ver Carrito</button>
-        </Link>
-      </div>
       <div className="productos-grid">
         <ProductList />
       </div>
