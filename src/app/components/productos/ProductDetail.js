@@ -4,13 +4,13 @@ import "./Productos.css";
 import { useCart } from "../../providers/CartContext";
 
 export default function ProductDetail({ producto, onClose }) {
-  if (!producto) return null;
-
   const { addToCart } = useCart();
-  const images = producto.imagenes || [producto.imagen, producto.imagen, producto.imagen];
-  const tallas = producto.tallas || ["S", "M", "L", "XL", "XXL"];
-  const [tallaSeleccionada, setTallaSeleccionada] = useState(tallas[0]);
+  const [tallaSeleccionada, setTallaSeleccionada] = useState(producto?.tallas?.[0] || "S");
   const [agregado, setAgregado] = useState(false);
+  const images = producto?.imagenes || [producto?.imagen, producto?.imagen, producto?.imagen];
+  const tallas = producto?.tallas || ["S", "M", "L", "XL", "XXL"];
+
+  if (!producto) return null;
 
   function handleAddToCart() {
     addToCart(producto, 1, tallaSeleccionada);
