@@ -1,5 +1,5 @@
-import CarritoPage from "../CarritoPage";
+import CarritoContainer from "@/app/components/carrito/CarritoContainer";
 
 export default function Carrito() {
-  return <CarritoPage />;
-} 
+  return <CarritoContainer />;
+}   
