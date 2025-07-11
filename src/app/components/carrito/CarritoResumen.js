@@ -1,4 +1,5 @@
 "use client";
+import "./CarritoResumen.css";
 
 const CarritoResumen = ({ subtotal, cart }) => (
   <div className="carrito-resumen">

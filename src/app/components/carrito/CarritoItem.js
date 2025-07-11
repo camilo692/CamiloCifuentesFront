@@ -1,4 +1,5 @@
 "use client";
+import "./CarritoItem.css";
 
 const CarritoItem = ({ item, updateQuantity, removeFromCart }) => (
   <div className="carrito-item" key={item.id + (item.talla || "") }>
