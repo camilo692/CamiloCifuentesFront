@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "./Productos.css";
 
@@ -20,7 +21,7 @@ export default function ProductCard({ producto, onClick }) {
         </div>
         <div className="product-meta">
           <span className="product-gender">{producto.genero}</span>
-          <span className="product-price">${producto.precio}</span>
+          <span className="product-price">${producto.precio.toLocaleString()}</span>
         </div>
         <div className="product-stock">
           <span className="stock-info">Stock: {producto.stock}</span>

@@ -5,10 +5,12 @@ import { useCart } from "../../providers/CartContext";
 
 export default function ProductDetail({ producto, onClose }) {
   const { addToCart } = useCart();
-  const [tallaSeleccionada, setTallaSeleccionada] = useState(producto?.tallas?.[0] || "S");
+  const [tallaSeleccionada, setTallaSeleccionada] = useState(producto?.tallas?.[0] || "");
   const [agregado, setAgregado] = useState(false);
-  const images = producto?.imagenes || [producto?.imagen, producto?.imagen, producto?.imagen];
-  const tallas = producto?.tallas || ["S", "M", "L", "XL", "XXL"];
+  
+  // Usar datos reales del backend
+  const images = producto?.imagenes || [producto?.imagen];
+  const tallas = producto?.tallas || [];
 
   if (!producto) return null;
 
@@ -25,7 +27,7 @@ export default function ProductDetail({ producto, onClose }) {
           <div className="product-detail-thumbnails">
             {images.map((img, idx) => (
               <div key={idx} className="thumbnail-placeholder">
-                <img src={img} alt={`thumb-${idx}`} />
+                <img src={img} alt={`${producto.nombre} - imagen ${idx + 1}`} />
               </div>
             ))}
           </div>
@@ -35,29 +37,33 @@ export default function ProductDetail({ producto, onClose }) {
         </div>
         <div className="product-detail-info">
           <h2 className="product-detail-title">{producto.nombre}</h2>
-          <div className="product-detail-gender">{producto.genero || "unisex"}</div>
-          <div className="product-detail-price">${producto.precio}</div>
-          <div className="product-detail-shortdesc">{producto.descripcionCorta || "Buzo negro"}</div>
+          <div className="product-detail-gender">{producto.genero}</div>
+          <div className="product-detail-price">${producto.precio.toLocaleString()}</div>
+          <div className="product-detail-shortdesc">{producto.descripcionCorta}</div>
           <div className="product-detail-description">
-            {producto.descripcion || (
-              <>Este hoodie unisex, esta hecho en algodón, cuenta con una capucha, bolsillo tipo canguro, puños y cintura en rib, cordones ajustables, y estampado.<br />100% algodón perchado</>
-            )}
+            {producto.descripcion}
           </div>
-          <div className="product-detail-tallas">
-            <div className="tabla-tallas">TABLA DE TALLAS</div>
-            <div className="tallas-list">
-              {tallas.map((t, idx) => (
-                <button
-                  key={t}
-                  className={`talla-btn${t === tallaSeleccionada ? " selected" : ""}`}
-                  onClick={() => setTallaSeleccionada(t)}
-                >
-                  {t}
-                </button>
-              ))}
+          {tallas.length > 0 && (
+            <div className="product-detail-tallas">
+              <div className="tabla-tallas">TABLA DE TALLAS</div>
+              <div className="tallas-list">
+                {tallas.map((t) => (
+                  <button
+                    key={t}
+                    className={`talla-btn${t === tallaSeleccionada ? " selected" : ""}`}
+                    onClick={() => setTallaSeleccionada(t)}
+                  >
+                    {t}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-          <button className="agregar-carrito-btn" onClick={handleAddToCart} disabled={agregado}>
+          )}
+          <button 
+            className="agregar-carrito-btn" 
+            onClick={handleAddToCart} 
+            disabled={agregado || !tallaSeleccionada}
+          >
             {agregado ? "¡Agregado!" : "AGREGAR AL CARRITO"}
           </button>
           <div className="product-detail-envios">
