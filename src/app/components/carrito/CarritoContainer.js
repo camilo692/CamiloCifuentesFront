@@ -1,4 +1,5 @@
 "use client";
+import "./CarritoContainer.css";
 import HeaderLandingContainer from "../header-landing/HeaderLandingContainer";
 import FooterLandingContainer from "../footer-landing/FooterLandingContainer";
 import { useCart } from "../../providers/CartContext";
@@ -8,7 +9,7 @@ import CarritoResumen from "./CarritoResumen";
 const CarritoContainer = () => {
   const { cart, updateQuantity, removeFromCart, subtotal } = useCart();
   return (
-    <div>
+    <div className="carrito-page">
       <HeaderLandingContainer />
       <div className="carrito-page-container">
         <CarritoLista cart={cart} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />

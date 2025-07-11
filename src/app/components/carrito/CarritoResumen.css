@@ -1,0 +1,50 @@
+.carrito-resumen {
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 254, 254, 0.04);
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: auto; /* <- Esto lo empuja al lado derecho */
+}
+
+.carrito-subtotal-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.carrito-subtotal-label {
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.carrito-subtotal-value {
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.carrito-envio {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.carrito-pagar-btn {
+  width: 241.8px;
+  height: 70.8px;
+  opacity: 0.6;
+  border-radius: 29px;
+  background-color: #ffc600;
+}
+
+.carrito-pagar-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+} 
