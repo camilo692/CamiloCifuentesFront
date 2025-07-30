@@ -24,29 +24,75 @@
   font-weight: bold;
   color: #333;
   text-align: left;
+  font-family: Montserrat;
+  font-size: 31 px;
+  font-weight: 600;
 }
 
 .carrito-subtotal-value {
   font-size: 1.2rem;
   color: #222;
+  font-family: Montserrat;
+  font-size: 31 px;
 }
 
 .carrito-envio {
   color: #888;
   font-size: 0.95rem;
   margin-bottom: 18px;
+  font-family: Montserrat;
 }
 
 .carrito-pagar-btn {
-  width: 241.8px;
-  height: 70.8px;
+  width: 145px;
+  height: 38px;
   opacity: 0.6;
   border-radius: 29px;
   background-color: #ffc600;
   align-self: center;
+  font-family: Montserrat;
+  font-size: 21 px;
 }
 
 .carrito-pagar-btn:disabled {
   background: #ccc;
   cursor: not-allowed;
 } 
+
+/* ======================= TABLETS ======================= */
+@media (max-width: 1024px) {
+  .carrito-resumen {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .carrito-pagar-btn {
+    width: 100%;
+  }
+}
+
+/* ======================= MÓVILES ======================= */
+@media (max-width: 600px) {
+  .carrito-resumen {
+    padding: 16px;
+    border-radius: 6px;
+    max-width: 100%;
+    box-shadow: none;
+    margin-top: 12px;
+  }
+
+  .carrito-subtotal-label,
+  .carrito-subtotal-value {
+    font-size: 22px;
+  }
+
+  .carrito-envio {
+    font-size: 0.85rem;
+  }
+
+  .carrito-pagar-btn {
+    width: 100%;
+    height: 44px;
+    font-size: 18px;
+  }
+}
